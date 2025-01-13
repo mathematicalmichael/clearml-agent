@@ -190,7 +190,7 @@ class UvAPI(object):
     def install(self):
         # type: () -> bool
         if self.enabled:
-            self.config.run("sync", "--locked", cwd=str(self.path), func=Argv.check_call)
+            self.config.run("sync", cwd=str(self.path), func=Argv.check_call)
             return True
         return False
 
